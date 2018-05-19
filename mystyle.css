@@ -1,0 +1,78 @@
+ /* CSS Animation for Interactive UI - Menu Button
+ 
+ /* Demo Section */
+
+ #menu-button {
+     height: 100px;
+ }
+
+.menu {
+    margin: 0 auto;
+    width: 100px;
+    height: 50px;
+}
+
+.bar-1, .bar-2, .bar-3 {
+    width: 100px;
+    height: 10px;
+    background-color: black;
+}
+
+.new-bar {
+    width: 200px;
+    height: 10px;
+    background-color: black;
+}
+
+/* CSS Animation */
+
+/* ------------ Just a Test ----------------- */
+.test {
+    /* Triggers Animation */
+    animation: increase-width 1.0s ease-out;
+}
+
+@keyframes increase-width {
+    0%      {width: 100px;}
+    100%    {width: 200px;}
+}
+
+.new-bar {
+    /* Final State */
+    width: 200px;
+    height: 10px;
+    background-color: black;
+} 
+/* ----------------------------------- */
+
+/* ------------ Rotate Menu 90 degrees right ----------------- */
+.rotate-90-right {
+/* Triggers Animation */
+animation: rotate-90-right 0.7s ease-out;
+}
+
+@keyframes rotate-90-right {
+    0%      {transform: rotate(0deg);}
+    100%    {transform: rotate(90deg);}
+}
+
+.menu-90-right {
+    /* Final State */
+    transform: rotate(90deg);
+}
+
+/* ------------ Rotate Menu 90 degrees left ----------- */
+.rotate-90-left {
+/* Triggers Animation */
+animation: rotate-90-left 0.7s ease-out;
+}
+
+@keyframes rotate-90-left {
+    0%      {transform: rotate(90deg);}
+    100%    {transform: rotate(0deg);}
+}
+
+.menu-90-left {
+    /* Final State */
+    transform: rotate(0deg);
+}

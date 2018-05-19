@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Interactive UI - Menu Button</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="animate.js"></script>
+
+    <style>
+    
+    /* Demo Section */
+    section.demo {
+        width: 100%;
+        margin: 0px 100px;
+    }
+
+    .menu {
+        margin: 0 auto;
+        width: 100px;
+        height: 50px;
+    }
+
+    .bar-1, .bar-2, .bar-3 {
+        width: 100px;
+        height: 10px;
+        background-color: black;
+    }
+
+    .new-bar {
+        width: 200px;
+        height: 10px;
+        background-color: black;
+    }
+
+    /* CSS Animation */
+
+    /* ------------ Just a Test ----------------- */
+    .test {
+        /* Triggers Animation */
+        animation: increase-width 1.0s ease-out;
+    }
+
+    @keyframes increase-width {
+        0%      {width: 100px;}
+        100%    {width: 200px;}
+    }
+
+    .new-bar {
+        /* Final State */
+        width: 200px;
+        height: 10px;
+        background-color: black;
+    } 
+    /* ----------------------------------- */
+
+    /* ------------ Rotate Menu 90 degrees right ----------------- */
+    .rotate-90-right {
+    /* Triggers Animation */
+    animation: rotate-90-right 0.7s ease-out;
+}
+
+    @keyframes rotate-90-right {
+        0%      {transform: rotate(0deg);}
+        100%    {transform: rotate(90deg);}
+    }
+    
+    .menu-90-right {
+        /* Final State */
+        transform: rotate(90deg);
+    }
+
+    /* ------------ Rotate Menu 90 degrees left ----------- */
+    .rotate-90-left {
+    /* Triggers Animation */
+    animation: rotate-90-left 0.7s ease-out;
+}
+
+    @keyframes rotate-90-left {
+        0%      {transform: rotate(90deg);}
+        100%    {transform: rotate(0deg);}
+    }
+    
+    .menu-90-left {
+        /* Final State */
+        transform: rotate(0deg);
+    }
+    </style>
+
+</head>
+<body>
+    <section>
+        <h1>Interactive UI - Menu Button</h1>
+        <p>Click on the menu button to see the animation</p>
+    </section>
+    <section class="demo">
+        <div id="menu-button" class="menu" onclick="rotateMenuRight()">
+            <div id="top-bar" class="bar-1" style="margin-bottom: 10px;"></div>
+            <div class="bar-2"></div>
+            <div class="bar-3" style="margin-top: 10px;"></div>
+        </div> 
+    </section>
+    <section>
+        <button onclick="reset()">RESET</button>
+    </section>
+</body>
+</html>
