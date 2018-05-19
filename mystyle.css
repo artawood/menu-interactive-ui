@@ -1,10 +1,10 @@
  /* CSS Animation for Interactive UI - Menu Button
- 
- /* Demo Section */
-
- #menu-button {
-     height: 100px;
- }
+    
+/* Demo Section */
+section.demo {
+    width: 100%;
+    margin: 0px 100px;
+}
 
 .menu {
     margin: 0 auto;
